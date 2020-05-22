@@ -1,0 +1,8 @@
+
+
+    <label>Username: <input maxlength="15"/></label>
+    <label id="email">Email: <input type="email"/></label>
+    <label class="password">Password: <input (keyup)="passwordValidate($event)" [value]="password" (valueChange)="password=$event"> </label>
+    <label class="password">Confirm Password: <input (keyup)="passwordValidate($event)" [value]="cPassword" (valueChange)="cPassword=$event"/></label>
+    <button id="signup">Sign up</button>
+
