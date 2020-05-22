@@ -1,8 +1,20 @@
 
-
-    <label>Username: <input maxlength="15"/></label>
-    <label id="email">Email: <input type="email"/></label>
-    <label class="password">Password: <input (keyup)="passwordValidate($event)" [value]="password" (valueChange)="password=$event"> </label>
-    <label class="password">Confirm Password: <input (keyup)="passwordValidate($event)" [value]="cPassword" (valueChange)="cPassword=$event"/></label>
-    <button id="signup">Sign up</button>
-
+<div class="global">
+    <ul>
+        <li>
+            <label>Username: <input maxlength="15"/></label>
+        </li>
+        <li>
+            <label >Email: <input  id="email" (keyup)="emailValid()" type="email"/></label>
+        </li>
+        <li>
+            <label class="password">Password: <input type="password" (keyup)="passwordValidate()" [(ngModel)]="password"> </label>
+        </li>
+        <li>
+            <label class="password">Confirm Password: <input type="password" (keyup)="passwordValidate()" [(ngModel)]="cPassword"/></label>
+        </li>
+        <li>
+            <button [disabled]="disable" id="signup">Sign up</button>
+        </li>
+    </ul>
+</div>
